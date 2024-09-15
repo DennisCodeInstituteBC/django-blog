@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-# importing database packages
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
@@ -25,13 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('django-insecure-a9qfcf(x!i^sd!qfs@pf)^xoa2d7d!gdc6#7sclr!4fctuf@l0')
+SECRET_KEY = 'django-insecure-+k6@nt=*an@bdr##mll5yiia+p-(icmo3192+=ygs01d*&takz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-denniscodein-djangoblog-hekijbdmwfv.ws.codeinstitute-ide.net',
-'.herokuapp.com']
+ALLOWED_HOSTS = ['8000-denniscodein-djangoblog-5je8cef9mwv.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -87,15 +85,9 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 #     }
 # }
 
-# Connection to the environment variable DTABASE_URL
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://8000-ajgreaves-blog-lesson-pl-lfv6kgfdws.us2.codeanyapp.com",
-    "https://*.herokuapp.com"
-]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
