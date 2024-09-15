@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-a9qfcf(x!i^sd!qfs@pf)^xoa2d7d!gdc6#7sclr!4fctuf@l0'
+SECRET_KEY = os.environ.get('django-insecure-a9qfcf(x!i^sd!qfs@pf)^xoa2d7d!gdc6#7sclr!4fctuf@l0')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-denniscodein-djangoblog-hekijbdmwfv.ws.codeinstitute-ide.net',
 '.herokuapp.com']
@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 
 # Connection to the environment variable DTABASE_URL
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse(os.environ.get("postgres://uinr77ef9q4:SkZpxdX9B6qd@ep-gentle-mountain-a23bxz6h-pooler.eu-central-1.aws.neon.tech/void_growl_drill_907282"))
 }
 
 # Password validation
