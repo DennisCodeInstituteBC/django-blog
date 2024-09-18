@@ -24,14 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-denniscodein-djangoblog-u5occ8b6k71.ws.codeinstitute-ide.net',
-    '.herokuapp.com'
+    "8000-denniscodein-djangoblog-u5occ8b6k71.ws.codeinstitute-ide.net",
+    ".herokuapp.com"
 ]
 
 
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_summernote',
     'blog',
 ]
 
@@ -93,8 +94,8 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-denniscodein-djangoblog-5je8cef9mwv.ws.codeinstitute-ide.net/",
-    "https://djangoblog-pj1-ae1e3147760f.herokuapp.com/"
+    "https://8000-ajgreaves-blog-lesson-pl-mjfxnpd4ht.us2.codeanyapp.com",
+    "https://*.herokuapp.com"
 ]
 
 # Password validation
